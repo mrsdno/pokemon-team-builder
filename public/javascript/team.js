@@ -17,7 +17,7 @@ async function deletePokemon(event) {
   event.preventDefault();
 
   //get id from delete btn
-  const id = deleteBtn.dataset.id;
+  const id = event.target.dataset.id;
   if (confirm("Are you sure you want to delete this pokemon?") == true) {
     const response = await fetch(`/api/pokemon/${id}`, {
       method: "DELETE",
